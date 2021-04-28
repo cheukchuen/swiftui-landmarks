@@ -13,3 +13,9 @@ To lay out the views, Landmarks uses _stacks_ to combine and layer the image and
 - By prefixing a state variable with `$`, you pass a binding, which is like a reference to the underlying value. When the user interacts with the map, the map updates the region value to match the part of the map that’s currently visible in the user interface.
 
 - When you specify only the `height` parameter, the view automatically sizes to the width of its content. In this case, `MapView` expands to fill the available space.
+
+## Building Lists and Navigation
+
+With the basic landmark detail view set up, you need to provide a way for users to see the full list of landmarks, and to view the details about each location.
+
+You’ll create views that can show information about any landmark, and dynamically generate a scrolling list that a user can tap to see a detail view for a landmark. To fine-tune the UI, you’ll use Xcode’s canvas to render multiple previews at different device sizes.
