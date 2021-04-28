@@ -12,4 +12,11 @@ struct Landmark: Hashable, Codable {
     var image: Image {
         Image(imageName)
     }
+
+    private var coordinates: Coordinates
+
+    struct Coordinates: Hashable, Codable {
+        var latitude: Double
+        var longitude: Double
+    }
 }
