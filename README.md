@@ -25,3 +25,7 @@ You’ll create views that can show information about any landmark, and dynamica
 - Adding Codable conformance makes it easier to load data into the structure from the data file.
 
 - You mark the property in a Codable structure as private because you’ll use it only to create a public computed property.
+
+- Lists work with _identifiable_ data. You can make your data identifiable in one of two ways: by passing along with your data a key path to a property that uniquely identifies each element, or by making your data type conform to the `Identifiable` protocol.
+
+- The Landmark data already has the `id` property required by `Identifiable` protocol; you only need to add a property to decode it when reading the data.
