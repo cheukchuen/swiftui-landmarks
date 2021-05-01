@@ -13,3 +13,21 @@ To lay out the views, Landmarks uses _stacks_ to combine and layer the image and
 - By prefixing a state variable with `$`, you pass a binding, which is like a reference to the underlying value. When the user interacts with the map, the map updates the region value to match the part of the map that’s currently visible in the user interface.
 
 - When you specify only the `height` parameter, the view automatically sizes to the width of its content. In this case, `MapView` expands to fill the available space.
+
+## Building Lists and Navigation
+
+With the basic landmark detail view set up, you need to provide a way for users to see the full list of landmarks, and to view the details about each location.
+
+You’ll create views that can show information about any landmark, and dynamically generate a scrolling list that a user can tap to see a detail view for a landmark. To fine-tune the UI, you’ll use Xcode’s canvas to render multiple previews at different device sizes.
+
+### Notes
+
+- Adding Codable conformance makes it easier to load data into the structure from the data file.
+
+- You mark the property in a Codable structure as private because you’ll use it only to create a public computed property.
+
+- Lists work with _identifiable_ data. You can make your data identifiable in one of two ways: by passing along with your data a key path to a property that uniquely identifies each element, or by making your data type conform to the `Identifiable` protocol.
+
+- The Landmark data already has the `id` property required by `Identifiable` protocol; you only need to add a property to decode it when reading the data.
+
+- `ForEach` operates on collections the same way as the list, which means you can use it anywhere you can use a child view, such as in stacks, lists, groups, and more. When the elements of your data are simple value types — like the strings you’re using here — you can use `\.self` as key path to the identifier.
