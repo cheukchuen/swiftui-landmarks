@@ -29,3 +29,5 @@ You’ll create views that can show information about any landmark, and dynamica
 - Lists work with _identifiable_ data. You can make your data identifiable in one of two ways: by passing along with your data a key path to a property that uniquely identifies each element, or by making your data type conform to the `Identifiable` protocol.
 
 - The Landmark data already has the `id` property required by `Identifiable` protocol; you only need to add a property to decode it when reading the data.
+
+- `ForEach` operates on collections the same way as the list, which means you can use it anywhere you can use a child view, such as in stacks, lists, groups, and more. When the elements of your data are simple value types — like the strings you’re using here — you can use `\.self` as key path to the identifier.
