@@ -31,3 +31,7 @@ You’ll create views that can show information about any landmark, and dynamica
 - The Landmark data already has the `id` property required by `Identifiable` protocol; you only need to add a property to decode it when reading the data.
 
 - `ForEach` operates on collections the same way as the list, which means you can use it anywhere you can use a child view, such as in stacks, lists, groups, and more. When the elements of your data are simple value types — like the strings you’re using here — you can use `\.self` as key path to the identifier.
+
+## Handling User Input
+
+In the Landmarks app, a user can flag their favorite places, and filter the list to show just their favorites. To create this feature, you’ll start by adding a switch to the list so users can focus on just their favorites, and then you’ll add a star-shaped button that a user taps to flag a landmark as a favorite.
