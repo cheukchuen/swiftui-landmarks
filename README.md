@@ -55,3 +55,7 @@ In the Landmarks app, a user can flag their favorite places, and filter the list
 - An observable object is a custom object for your data that can be bound to a view from storage in SwiftUI’s environment. SwiftUI watches for any changes to observable objects that could affect a view, and displays the correct version of the view after a change.
 
 - An observable object needs to publish any changes to its data using the `@Published` keyword, so that its subscribers can pick up the change.
+
+- The modelData property gets its value automatically, as long as the environmentObject(_:) modifier has been applied to a parent.
+
+- Use the `@StateObject` attribute to initialize a model object for a given property only once during the life time of the app. This is true when you use the attribute in an app instance, as shown here, as well as when you use it in a view.
