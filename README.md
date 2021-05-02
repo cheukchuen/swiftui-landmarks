@@ -59,3 +59,5 @@ In the Landmarks app, a user can flag their favorite places, and filter the list
 - The modelData property gets its value automatically, as long as the environmentObject(_:) modifier has been applied to a parent.
 
 - Use the `@StateObject` attribute to initialize a model object for a given property only once during the life time of the app. This is true when you use the attribute in an app instance, as shown here, as well as when you use it in a view.
+
+- Because you use `@Binding`, changes made inside this view propagate back to the data source.
