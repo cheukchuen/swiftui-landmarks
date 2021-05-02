@@ -41,3 +41,11 @@ In the Landmarks app, a user can flag their favorite places, and filter the list
 - Because you use state properties to hold information that’s specific to a view and its subviews, you always create state as `private`.
 
 - When you make changes to your view’s structure, like adding or modifying a property, you need to manually refresh the canvas.
+
+- To give the user control over the list’s filter, you need to add a control that can alter the value of `showFavoritesOnly`. You do this by passing a binding to a toggle control.
+
+- A _binding_ acts as a reference to a mutable state. When a user taps the toggle from `off` to `on`, and `off` again, the control uses the binding to update the view’s state accordingly.
+
+- You use the `$` prefix to access a binding to a state variable, or one of its properties.
+
+- To combine static and dynamic views in a list, or to combine two or more different groups of dynamic views, use the `ForEach` type instead of passing your collection of data to `List`.
