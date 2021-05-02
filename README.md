@@ -49,3 +49,9 @@ In the Landmarks app, a user can flag their favorite places, and filter the list
 - You use the `$` prefix to access a binding to a state variable, or one of its properties.
 
 - To combine static and dynamic views in a list, or to combine two or more different groups of dynamic views, use the `ForEach` type instead of passing your collection of data to `List`.
+
+- To prepare for the user to control which particular landmarks are favorites, you’ll first store the landmark data in an _observable_ object.
+
+- An observable object is a custom object for your data that can be bound to a view from storage in SwiftUI’s environment. SwiftUI watches for any changes to observable objects that could affect a view, and displays the correct version of the view after a change.
+
+- An observable object needs to publish any changes to its data using the `@Published` keyword, so that its subscribers can pick up the change.
