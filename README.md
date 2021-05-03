@@ -31,3 +31,33 @@ You’ll create views that can show information about any landmark, and dynamica
 - The Landmark data already has the `id` property required by `Identifiable` protocol; you only need to add a property to decode it when reading the data.
 
 - `ForEach` operates on collections the same way as the list, which means you can use it anywhere you can use a child view, such as in stacks, lists, groups, and more. When the elements of your data are simple value types — like the strings you’re using here — you can use `\.self` as key path to the identifier.
+
+## Handling User Input
+
+In the Landmarks app, a user can flag their favorite places, and filter the list to show just their favorites. To create this feature, you’ll start by adding a switch to the list so users can focus on just their favorites, and then you’ll add a star-shaped button that a user taps to flag a landmark as a favorite.
+
+### Notes
+
+- Because you use state properties to hold information that’s specific to a view and its subviews, you always create state as `private`.
+
+- When you make changes to your view’s structure, like adding or modifying a property, you need to manually refresh the canvas.
+
+- To give the user control over the list’s filter, you need to add a control that can alter the value of `showFavoritesOnly`. You do this by passing a binding to a toggle control.
+
+- A _binding_ acts as a reference to a mutable state. When a user taps the toggle from `off` to `on`, and `off` again, the control uses the binding to update the view’s state accordingly.
+
+- You use the `$` prefix to access a binding to a state variable, or one of its properties.
+
+- To combine static and dynamic views in a list, or to combine two or more different groups of dynamic views, use the `ForEach` type instead of passing your collection of data to `List`.
+
+- To prepare for the user to control which particular landmarks are favorites, you’ll first store the landmark data in an _observable_ object.
+
+- An observable object is a custom object for your data that can be bound to a view from storage in SwiftUI’s environment. SwiftUI watches for any changes to observable objects that could affect a view, and displays the correct version of the view after a change.
+
+- An observable object needs to publish any changes to its data using the `@Published` keyword, so that its subscribers can pick up the change.
+
+- The modelData property gets its value automatically, as long as the environmentObject(_:) modifier has been applied to a parent.
+
+- Use the `@StateObject` attribute to initialize a model object for a given property only once during the life time of the app. This is true when you use the attribute in an app instance, as shown here, as well as when you use it in a view.
+
+- Because you use `@Binding`, changes made inside this view propagate back to the data source.
