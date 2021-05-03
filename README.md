@@ -81,3 +81,5 @@ If you want to create multiple badges for different kinds of landmarks, try expe
 - Use the `addQuadCurve(to:control:)` method to draw the Bézier curves for the badge’s corners.
 
 - By preserving a 1:1 aspect ratio, the badge maintains its position at the center of the view, even if its ancestor views aren’t square.
+
+- Wrap the path in a `GeometryReader` so the badge can use the size of its containing view
