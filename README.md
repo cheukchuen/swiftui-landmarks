@@ -61,3 +61,11 @@ In the Landmarks app, a user can flag their favorite places, and filter the list
 - Use the `@StateObject` attribute to initialize a model object for a given property only once during the life time of the app. This is true when you use the attribute in an app instance, as shown here, as well as when you use it in a view.
 
 - Because you use `@Binding`, changes made inside this view propagate back to the data source.
+
+# Drawing and Animation
+
+## Drawing Paths and Shapes
+
+Users receive a badge whenever they visit a landmark in their list. Of course, for a user to receive a badge, you’ll need to create one. This tutorial takes you through the process of creating a badge by combining paths and shapes, which you then overlay with another shape that represents the location.
+
+If you want to create multiple badges for different kinds of landmarks, try experimenting with the overlaid symbol, varying the amount of repetition, or changing the various angles and scales.
