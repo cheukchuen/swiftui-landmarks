@@ -83,3 +83,9 @@ If you want to create multiple badges for different kinds of landmarks, try expe
 - By preserving a 1:1 aspect ratio, the badge maintains its position at the center of the view, even if its ancestor views aren’t square.
 
 - Wrap the path in a `GeometryReader` so the badge can use the size of its containing view
+
+## Animating Views and Transitions
+
+When using SwiftUI, you can individually animate changes to views, or to a view’s state, no matter where the effects are. SwiftUI handles all the complexity of these combined, overlapping, and interruptible animations for you.
+
+In this tutorial, you’ll animate a view that contains a graph for tracking the hikes a user takes while using the Landmarks app. Using the `animation(_:)` modifier, you’ll see just how easy it is to animate a view.
