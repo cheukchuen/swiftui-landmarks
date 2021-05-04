@@ -61,3 +61,25 @@ In the Landmarks app, a user can flag their favorite places, and filter the list
 - Use the `@StateObject` attribute to initialize a model object for a given property only once during the life time of the app. This is true when you use the attribute in an app instance, as shown here, as well as when you use it in a view.
 
 - Because you use `@Binding`, changes made inside this view propagate back to the data source.
+
+# Drawing and Animation
+
+## Drawing Paths and Shapes
+
+Users receive a badge whenever they visit a landmark in their list. Of course, for a user to receive a badge, you’ll need to create one. This tutorial takes you through the process of creating a badge by combining paths and shapes, which you then overlay with another shape that represents the location.
+
+If you want to create multiple badges for different kinds of landmarks, try experimenting with the overlaid symbol, varying the amount of repetition, or changing the various angles and scales.
+
+### Notes
+
+- You use paths to combine lines, curves, and other drawing primitives to form more complex shapes like the badge’s hexagonal background.
+
+- The `move(to:)` method moves the drawing cursor within the bounds of a shape as though an imaginary pen or pencil is hovering over the area, waiting to start drawing.
+
+- The `addLine(to:)` method takes a single point and draws it. Successive calls to `addLine(to:)` begin a line at the previous point and continue to the new point.
+
+- Use the `addQuadCurve(to:control:)` method to draw the Bézier curves for the badge’s corners.
+
+- By preserving a 1:1 aspect ratio, the badge maintains its position at the center of the view, even if its ancestor views aren’t square.
+
+- Wrap the path in a `GeometryReader` so the badge can use the size of its containing view
