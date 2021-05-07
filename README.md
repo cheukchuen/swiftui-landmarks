@@ -95,3 +95,7 @@ In this tutorial, you’ll animate a view that contains a graph for tracking the
 ## Composing Complex Interfaces
 
 The category view for Landmarks shows a vertically scrolling list of horizontally scrolling landmarks. As you build this view and connect it to your existing views, you’ll explore how composed views can adapt to different device sizes and orientations.
+
+### Notes
+
+- The `WindowGroup` scene defined in the app body declares `ContentView` as the root view of the app.
