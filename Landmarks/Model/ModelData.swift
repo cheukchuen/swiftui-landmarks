@@ -9,6 +9,10 @@ final class ModelData: ObservableObject {
     // since we'll never modify hike data after initially loading it
     var hikes: [Hike] = load("hikeData.json")
 
+    var features: [Landmark] {
+        landmarks.filter { $0.isFeatured }
+    }
+
     var categories: [String: [Landmark]] {
         Dictionary(
             grouping: landmarks,
