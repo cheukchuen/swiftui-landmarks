@@ -99,3 +99,9 @@ The category view for Landmarks shows a vertically scrolling list of horizontall
 ### Notes
 
 - The `WindowGroup` scene defined in the app body declares `ContentView` as the root view of the app.
+
+## Working with UI Controls
+
+In the Landmarks app, users can create a profile to express their personality. To give users the ability to change their profile, you’ll add an edit mode and design the preferences screen.
+
+You’ll work with a variety of common user interface controls for data entry, and update the Landmarks model types whenever the user saves their changes.
