@@ -113,3 +113,5 @@ You’ll work with a variety of common user interface controls for data entry, a
 - The `EditButton` controls the same `editMode` environment value that you accessed in the previous step.
 
 - To avoid updating the global app state before confirming any edits — such as while the user enters their name — the editing view operates on a copy of itself.
+
+- The first control in the view is a `TextField`, which controls and updates a string binding — in this case, the user’s chosen display name. You provide a label and a binding to a string when creating a text field.
