@@ -89,3 +89,13 @@ If you want to create multiple badges for different kinds of landmarks, try expe
 When using SwiftUI, you can individually animate changes to views, or to a view’s state, no matter where the effects are. SwiftUI handles all the complexity of these combined, overlapping, and interruptible animations for you.
 
 In this tutorial, you’ll animate a view that contains a graph for tracking the hikes a user takes while using the Landmarks app. Using the `animation(_:)` modifier, you’ll see just how easy it is to animate a view.
+
+# App Design and Layout
+
+## Composing Complex Interfaces
+
+The category view for Landmarks shows a vertically scrolling list of horizontally scrolling landmarks. As you build this view and connect it to your existing views, you’ll explore how composed views can adapt to different device sizes and orientations.
+
+### Notes
+
+- The `WindowGroup` scene defined in the app body declares `ContentView` as the root view of the app.
