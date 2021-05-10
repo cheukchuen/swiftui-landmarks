@@ -99,3 +99,19 @@ The category view for Landmarks shows a vertically scrolling list of horizontall
 ### Notes
 
 - The `WindowGroup` scene defined in the app body declares `ContentView` as the root view of the app.
+
+## Working with UI Controls
+
+In the Landmarks app, users can create a profile to express their personality. To give users the ability to change their profile, you’ll add an edit mode and design the preferences screen.
+
+You’ll work with a variety of common user interface controls for data entry, and update the Landmarks model types whenever the user saves their changes.
+
+### Notes
+
+- SwiftUI provides storage in the environment for values you can access using the `@Environment` property wrapper. Access the editMode value to read or write the edit scope.
+
+- The `EditButton` controls the same `editMode` environment value that you accessed in the previous step.
+
+- To avoid updating the global app state before confirming any edits — such as while the user enters their name — the editing view operates on a copy of itself.
+
+- The first control in the view is a `TextField`, which controls and updates a string binding — in this case, the user’s chosen display name. You provide a label and a binding to a string when creating a text field.
