@@ -129,3 +129,7 @@ This tutorial shows you how to convert the featured landmark from the home scree
 - SwiftUI manages your `UIViewControllerRepresentable` type’s coordinator, and provides it as part of the context when calling the methods you created in `PageViewController`.
 
 - SwiftUI calls `makeCoordinator()` method before `makeUIViewController(context:)`, so that you have access to the coordinator object when configuring your view controller.
+
+- `UIViewRepresentable` and `UIViewControllerRepresentable` types have the same life cycle, with methods that correspond to their underlying UIKit types.
+
+- Because `UIControl` subclasses like `UIPageControl` use the target-action pattern instead of delegation, this `Coordinator` implements an `@objc` method to update the current page binding.
