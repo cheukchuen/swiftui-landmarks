@@ -115,3 +115,21 @@ You’ll work with a variety of common user interface controls for data entry, a
 - To avoid updating the global app state before confirming any edits — such as while the user enters their name — the editing view operates on a copy of itself.
 
 - The first control in the view is a `TextField`, which controls and updates a string binding — in this case, the user’s chosen display name. You provide a label and a binding to a string when creating a text field.
+
+# Framework Integration
+
+## Interfacing with UIKit
+
+SwiftUI works seamlessly with the existing UI frameworks on all Apple platforms. For example, you can place UIKit views and view controllers inside SwiftUI views, and vice versa.
+
+This tutorial shows you how to convert the featured landmark from the home screen to wrap instances of `UIPageViewController` and `UIPageControl`. You’ll use `UIPageViewController` to display a carousel of SwiftUI views, and use state variables and bindings to coordinate data updates throughout the user interface.
+
+### Notes
+
+- SwiftUI manages your `UIViewControllerRepresentable` type’s coordinator, and provides it as part of the context when calling the methods you created in `PageViewController`.
+
+- SwiftUI calls `makeCoordinator()` method before `makeUIViewController(context:)`, so that you have access to the coordinator object when configuring your view controller.
+
+- `UIViewRepresentable` and `UIViewControllerRepresentable` types have the same life cycle, with methods that correspond to their underlying UIKit types.
+
+- Because `UIControl` subclasses like `UIPageControl` use the target-action pattern instead of delegation, this `Coordinator` implements an `@objc` method to update the current page binding.
